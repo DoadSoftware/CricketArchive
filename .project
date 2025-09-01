@@ -3,7 +3,6 @@
 	<name>CricketArchive</name>
 	<comment></comment>
 	<projects>
-		<project>CricketLibrary</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

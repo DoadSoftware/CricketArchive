@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
   <link rel="stylesheet" href="<c:url value="/webjars/bootstrap/3.3.6/css/bootstrap.min.css"/>"/>  
 </head>
 <body>
-<form:form name="initialise_form" autocomplete="off" action="cricket-archive" method="POST">
+<form name="initialise_form" autocomplete="off" action="cricketarchive" method="POST" enctype="multipart/form-data">
 <div class="content py-5" style="background-color: #EAE8FF; color: #2E008B">
   <div class="container">
 	<div class="row">
@@ -39,6 +40,6 @@
     </div>
   </div>
 </div>
-</form:form>
+</form>
 </body>
 </html>

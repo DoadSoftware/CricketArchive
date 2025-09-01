@@ -17,8 +17,8 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.cricketarchive.controller","com.cricketarchive.service","com.cricketarchive.dao",
-	"com.cricketarchive.dao.impl","com.cricketarchive.service.impl"})
+@ComponentScan({"com.cricketarchive.controller", "com.cricketarchive.dao", "com.cricketarchive.dao.impl", 
+	"com.cricketarchive.service", "com.cricketarchive.service.impl"})
 @Import({ SecurityConfig.class, DataSourceConfig.class })
 @PropertySource("/WEB-INF/db.properties")
 public class WebMvcConfig extends WebMvcConfigurerAdapter

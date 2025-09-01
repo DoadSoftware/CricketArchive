@@ -83,22 +83,6 @@ public class Inning {
   private Team batting_team;
 
   private Team bowling_team;
- 
-public Team getBatting_team() {
-	return batting_team;
-}
-
-public void setBatting_team(Team batting_team) {
-	this.batting_team = batting_team;
-}
-
-public Team getBowling_team() {
-	return bowling_team;
-}
-
-public void setBowling_team(Team bowling_team) {
-	this.bowling_team = bowling_team;
-}
 
 public String getStartTime() {
 	return startTime;
@@ -388,6 +372,22 @@ public void setFallsOfWickets(List<FallOfWicket> fallsOfWickets) {
 	this.fallsOfWickets = fallsOfWickets;
 }
 
+public Team getBatting_team() {
+	return batting_team;
+}
+
+public void setBatting_team(Team batting_team) {
+	this.batting_team = batting_team;
+}
+
+public Team getBowling_team() {
+	return bowling_team;
+}
+
+public void setBowling_team(Team bowling_team) {
+	this.bowling_team = bowling_team;
+}
+
 @Override
 public String toString() {
 	return "Inning [startTime=" + startTime + ", endTime=" + endTime + ", duration=" + duration + ", isDeclared="
@@ -406,5 +406,5 @@ public String toString() {
 			+ ", fallsOfWickets=" + fallsOfWickets + ", batting_team=" + batting_team + ", bowling_team=" + bowling_team
 			+ "]";
 }
-
+ 
 }

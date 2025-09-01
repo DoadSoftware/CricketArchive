@@ -1,12 +1,11 @@
 package com.cricketarchive.model;
 
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BowlingCard implements Comparable<BowlingCard> {
+public class BowlingCard {
 
   private Player player;
 
@@ -56,7 +55,8 @@ public BowlingCard(int playerId,int bowlingPosition, String status, int bowling_
 	this.bowlingPosition = bowlingPosition;
 	this.status = status;
 	this.bowling_end = bowling_end;
-}  
+}
+
 public Player getPlayer() {
 	return player;
 }
@@ -217,11 +217,6 @@ public String toString() {
 			+ noBalls + ", runOuts=" + runOuts + ", stumpings=" + stumpings + ", catchAsFielder=" + catchAsFielder
 			+ ", catchAsBowler=" + catchAsBowler + ", maidens=" + maidens + ", dots=" + dots + ", totalRunsThisOver="
 			+ totalRunsThisOver + "]";
-}
-
-@Override
-public int compareTo(BowlingCard bc) {
-	return (int) (this.getBowlingPosition()-bc.getBowlingPosition());
-}
+}  
 
 }

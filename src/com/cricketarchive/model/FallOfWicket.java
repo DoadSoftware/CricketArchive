@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FallOfWicket implements Comparable<FallOfWicket>
+public class FallOfWicket
 {
   private int fowNumber;
   
@@ -30,14 +30,6 @@ public FallOfWicket(int fowNumber, int fowPlayerID, int fowRuns, int fowOvers, i
 	this.fowRuns = fowRuns;
 	this.fowOvers = fowOvers;
 	this.fowBalls = fowBalls;
-	this.fowDateTime = fowDateTime;
-}
-
-public String getFowDateTime() {
-	return fowDateTime;
-}
-
-public void setFowDateTime(String fowDateTime) {
 	this.fowDateTime = fowDateTime;
 }
 
@@ -81,15 +73,18 @@ public void setFowBalls(int fowBalls) {
 	this.fowBalls = fowBalls;
 }
 
-@Override
-public int compareTo(FallOfWicket fow) {
-	return (int) (this.getFowNumber()-fow.getFowNumber());
+public String getFowDateTime() {
+	return fowDateTime;
+}
+
+public void setFowDateTime(String fowDateTime) {
+	this.fowDateTime = fowDateTime;
 }
 
 @Override
 public String toString() {
 	return "FallOfWicket [fowNumber=" + fowNumber + ", fowPlayerID=" + fowPlayerID + ", fowRuns=" + fowRuns
-			+ ", fowOvers=" + fowOvers + ", fowBalls=" + fowBalls + "]";
+			+ ", fowOvers=" + fowOvers + ", fowBalls=" + fowBalls + ", fowDateTime=" + fowDateTime + "]";
 }
 
 }

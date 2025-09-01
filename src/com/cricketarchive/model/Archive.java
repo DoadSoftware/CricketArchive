@@ -12,19 +12,6 @@ public class Archive{
   private List<ArchiveData> series;
   private List<ArchiveData> matches;
   private MatchAllData matchAllData;
-  
-  public MatchAllData getMatchAllData() {
-	return matchAllData;
-}
-public void setMatchAllData(MatchAllData matchAllData) {
-	this.matchAllData = matchAllData;
-}
-public List<ArchiveData> getMatches() {
-	return matches;
-}
-public void setMatches(List<ArchiveData> matches) {
-	this.matches = matches;
-}
 public List<ArchiveData> getSeasons() {
 	return seasons;
 }
@@ -37,10 +24,22 @@ public List<ArchiveData> getSeries() {
 public void setSeries(List<ArchiveData> series) {
 	this.series = series;
 }
+public List<ArchiveData> getMatches() {
+	return matches;
+}
+public void setMatches(List<ArchiveData> matches) {
+	this.matches = matches;
+}
+public MatchAllData getMatchAllData() {
+	return matchAllData;
+}
+public void setMatchAllData(MatchAllData matchAllData) {
+	this.matchAllData = matchAllData;
+}
 @Override
 public String toString() {
 	return "Archive [seasons=" + seasons + ", series=" + series + ", matches=" + matches + ", matchAllData="
 			+ matchAllData + "]";
 }
-	  
+  
 }

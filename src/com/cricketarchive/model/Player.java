@@ -165,5 +165,5 @@ public String toString() {
 			+ ", battingStyle=" + battingStyle + ", teamId=" + teamId + ", Photo=" + Photo + ", gender=" + gender
 			+ ", playerPosition=" + playerPosition + ", captainWicketKeeper=" + captainWicketKeeper + "]";
 }
-  
+
 }

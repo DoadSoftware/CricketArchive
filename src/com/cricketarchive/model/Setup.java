@@ -99,14 +99,6 @@ public class Setup {
 
   private List<Player> awayOtherSquad;
 
-public String getPlayerGender() {
-	return playerGender;
-}
-
-public void setPlayerGender(String playerGender) {
-	this.playerGender = playerGender;
-}
-
 public String getSpecialMatchRules() {
 	return specialMatchRules;
 }
@@ -115,20 +107,28 @@ public void setSpecialMatchRules(String specialMatchRules) {
 	this.specialMatchRules = specialMatchRules;
 }
 
-public int getSecondaryTargetRuns() {
-	return secondaryTargetRuns;
+public String getNoBallsRuns() {
+	return noBallsRuns;
 }
 
-public void setSecondaryTargetRuns(int secondaryTargetRuns) {
-	this.secondaryTargetRuns = secondaryTargetRuns;
+public void setNoBallsRuns(String noBallsRuns) {
+	this.noBallsRuns = noBallsRuns;
 }
 
-public String getSecondaryTargetOvers() {
-	return secondaryTargetOvers;
+public String getBallsPerOver() {
+	return ballsPerOver;
 }
 
-public void setSecondaryTargetOvers(String secondaryTargetOvers) {
-	this.secondaryTargetOvers = secondaryTargetOvers;
+public void setBallsPerOver(String ballsPerOver) {
+	this.ballsPerOver = ballsPerOver;
+}
+
+public String getMatchDataUpdate() {
+	return matchDataUpdate;
+}
+
+public void setMatchDataUpdate(String matchDataUpdate) {
+	this.matchDataUpdate = matchDataUpdate;
 }
 
 public String getSaveMatchFileAs() {
@@ -137,22 +137,6 @@ public String getSaveMatchFileAs() {
 
 public void setSaveMatchFileAs(String saveMatchFileAs) {
 	this.saveMatchFileAs = saveMatchFileAs;
-}
-
-public String getSetupHomeTeam() {
-	return setupHomeTeam;
-}
-
-public void setSetupHomeTeam(String setupHomeTeam) {
-	this.setupHomeTeam = setupHomeTeam;
-}
-
-public String getSetupAwayTeam() {
-	return setupAwayTeam;
-}
-
-public void setSetupAwayTeam(String setupAwayTeam) {
-	this.setupAwayTeam = setupAwayTeam;
 }
 
 public String getGenerateInteractiveFile() {
@@ -179,38 +163,6 @@ public void setWagonYOffSet(int wagonYOffSet) {
 	this.wagonYOffSet = wagonYOffSet;
 }
 
-public int getHomeSubstitutesNumber() {
-	return homeSubstitutesNumber;
-}
-
-public void setHomeSubstitutesNumber(int homeSubstitutesNumber) {
-	this.homeSubstitutesNumber = homeSubstitutesNumber;
-}
-
-public int getAwaySubstitutesNumber() {
-	return awaySubstitutesNumber;
-}
-
-public void setAwaySubstitutesNumber(int awaySubstitutesNumber) {
-	this.awaySubstitutesNumber = awaySubstitutesNumber;
-}
-
-public int getSeasonId() {
-	return seasonId;
-}
-
-public void setSeasonId(int seasonId) {
-	this.seasonId = seasonId;
-}
-
-public String getSpeedFilePath() {
-	return speedFilePath;
-}
-
-public void setSpeedFilePath(String speedFilePath) {
-	this.speedFilePath = speedFilePath;
-}
-
 public String getFollowOn() {
 	return followOn;
 }
@@ -225,6 +177,22 @@ public int getFollowOnThreshold() {
 
 public void setFollowOnThreshold(int followOnThreshold) {
 	this.followOnThreshold = followOnThreshold;
+}
+
+public int getHomeSubstitutesNumber() {
+	return homeSubstitutesNumber;
+}
+
+public void setHomeSubstitutesNumber(int homeSubstitutesNumber) {
+	this.homeSubstitutesNumber = homeSubstitutesNumber;
+}
+
+public int getAwaySubstitutesNumber() {
+	return awaySubstitutesNumber;
+}
+
+public void setAwaySubstitutesNumber(int awaySubstitutesNumber) {
+	this.awaySubstitutesNumber = awaySubstitutesNumber;
 }
 
 public String getReviewsPerTeam() {
@@ -243,12 +211,28 @@ public void setMatchFileTimeStamp(String matchFileTimeStamp) {
 	this.matchFileTimeStamp = matchFileTimeStamp;
 }
 
+public String getSpeedFilePath() {
+	return speedFilePath;
+}
+
+public void setSpeedFilePath(String speedFilePath) {
+	this.speedFilePath = speedFilePath;
+}
+
 public String getMatchType() {
 	return matchType;
 }
 
 public void setMatchType(String matchType) {
 	this.matchType = matchType;
+}
+
+public String getPlayerGender() {
+	return playerGender;
+}
+
+public void setPlayerGender(String playerGender) {
+	this.playerGender = playerGender;
 }
 
 public String getTossResult() {
@@ -339,6 +323,14 @@ public void setGroundId(int groundId) {
 	this.groundId = groundId;
 }
 
+public int getSeasonId() {
+	return seasonId;
+}
+
+public void setSeasonId(int seasonId) {
+	this.seasonId = seasonId;
+}
+
 public int getTargetRuns() {
 	return targetRuns;
 }
@@ -363,6 +355,22 @@ public void setTargetOvers(String targetOvers) {
 	this.targetOvers = targetOvers;
 }
 
+public int getSecondaryTargetRuns() {
+	return secondaryTargetRuns;
+}
+
+public void setSecondaryTargetRuns(int secondaryTargetRuns) {
+	this.secondaryTargetRuns = secondaryTargetRuns;
+}
+
+public String getSecondaryTargetOvers() {
+	return secondaryTargetOvers;
+}
+
+public void setSecondaryTargetOvers(String secondaryTargetOvers) {
+	this.secondaryTargetOvers = secondaryTargetOvers;
+}
+
 public String getVenueName() {
 	return venueName;
 }
@@ -385,6 +393,22 @@ public Team getAwayTeam() {
 
 public void setAwayTeam(Team awayTeam) {
 	this.awayTeam = awayTeam;
+}
+
+public String getSetupHomeTeam() {
+	return setupHomeTeam;
+}
+
+public void setSetupHomeTeam(String setupHomeTeam) {
+	this.setupHomeTeam = setupHomeTeam;
+}
+
+public String getSetupAwayTeam() {
+	return setupAwayTeam;
+}
+
+public void setSetupAwayTeam(String setupAwayTeam) {
+	this.setupAwayTeam = setupAwayTeam;
 }
 
 public List<Player> getHomeSquad() {
@@ -433,30 +457,6 @@ public List<Player> getAwayOtherSquad() {
 
 public void setAwayOtherSquad(List<Player> awayOtherSquad) {
 	this.awayOtherSquad = awayOtherSquad;
-}
-
-public String getNoBallsRuns() {
-	return noBallsRuns;
-}
-
-public void setNoBallsRuns(String noBallsRuns) {
-	this.noBallsRuns = noBallsRuns;
-}
-
-public String getBallsPerOver() {
-	return ballsPerOver;
-}
-
-public void setBallsPerOver(String ballsPerOver) {
-	this.ballsPerOver = ballsPerOver;
-}
-
-public String getMatchDataUpdate() {
-	return matchDataUpdate;
-}
-
-public void setMatchDataUpdate(String matchDataUpdate) {
-	this.matchDataUpdate = matchDataUpdate;
 }
 
 @Override

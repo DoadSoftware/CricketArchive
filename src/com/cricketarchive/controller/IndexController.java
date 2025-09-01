@@ -3,8 +3,6 @@ package com.cricketarchive.controller;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import org.openqa.selenium.WebDriver;
@@ -41,60 +39,26 @@ public class IndexController
 	
 	@RequestMapping(value = {"/","/initialise"}, method={RequestMethod.GET,RequestMethod.POST}) 
 	public String initialisePage(ModelMap model) 
-		throws JAXBException, IOException, ParseException 
 	{
-		if(current_date == null || current_date.isEmpty()) {
-			current_date = CricketFunctions.getOnlineCurrentDate();
-		}
-		if(current_date == null || current_date.isEmpty()) {
-			
-			model.addAttribute("error_message","You must be connected to the internet online");
-			return "error";
-		
-		} else if(new SimpleDateFormat("yyyy-MM-dd").parse(expiry_date).before(new SimpleDateFormat("yyyy-MM-dd").parse(current_date))) {
-			
-			model.addAttribute("error_message","This software has expired");
-			return "error";
-			
-		}else {
-			
 //			session_archive.setMatchAllData(CricketFunctions.getMatchDataFromWebsite(new ChromeDriver(),"GET-SINGLE-MATCH-DATA", CricketUtil.CRIC_INFO, 
 //				"https://www.espncricinfo.com/series/west-indies-in-pakistan-2022-1314914/pakistan-vs-west-indies-1st-odi-1315038/full-scorecard"));
-			
-			return "initialise";
-		}	
+		return "initialise";
 	}
 	
-	@RequestMapping(value = {"/cricket-archive"}, method={RequestMethod.GET,RequestMethod.POST}) 
+	@RequestMapping(value = {"/cricketarchive"}, method={RequestMethod.GET,RequestMethod.POST}) 
 	public String cricketArchivePage(ModelMap model,
-		@RequestParam(value = "select_broadcaster", required = false, defaultValue = "") String select_broadcaster)
-		throws JAXBException, IOException, ParseException 
+		@RequestParam(value = "select_broadcaster", required = false, defaultValue = "") String select_broadcaster) 
+		throws JAXBException
 	{
-		if(current_date == null || current_date.isEmpty()) {
-			current_date = CricketFunctions.getOnlineCurrentDate();
-		}
-		if(current_date == null || current_date.isEmpty()) {
-			
-			model.addAttribute("error_message","You must be connected to the internet online");
-			return "error";
+		session_archive = new Archive();
 		
-		} else if(new SimpleDateFormat("yyyy-MM-dd").parse(expiry_date).before(new SimpleDateFormat("yyyy-MM-dd").parse(current_date))) {
-			
-			model.addAttribute("error_message","This software has expired");
-			return "error";
-			
-		}else {
-			
-			session_archive = new Archive();
-			
-			session_Configurations = new Configuration(select_broadcaster);
-			JAXBContext.newInstance(Configuration.class).createMarshaller().marshal(session_Configurations, 
-					new File(CricketUtil.CRICKET_DIRECTORY + CricketUtil.CONFIGURATIONS_DIRECTORY + CricketUtil.CRIC_ARCHIVE_XML));
-			
-			model.addAttribute("session_Configurations", session_Configurations);
+		session_Configurations = new Configuration(select_broadcaster);
+		JAXBContext.newInstance(Configuration.class).createMarshaller().marshal(session_Configurations, 
+				new File(CricketUtil.CRICKET_DIRECTORY + CricketUtil.CONFIGURATIONS_DIRECTORY + CricketUtil.CRIC_ARCHIVE_XML));
 		
-			return "cricketarchive";
-		}
+		model.addAttribute("session_Configurations", session_Configurations);
+	
+		return "cricketarchive";
 	}
 	
 	@RequestMapping(value = {"/processCricketArchiveProcedures"}, method={RequestMethod.GET,RequestMethod.POST})    
@@ -111,7 +75,7 @@ public class IndexController
 			session_archive.setSeasons(CricketFunctions.getStatsFromWebsite(driver,"GET-ALL-SEASONS",
 				session_Configurations.getBroadcaster(), "",null));
 			
-			return JSONObject.fromObject(session_archive).toString();	
+			return JSONObject.fromObject(session_archive).toString();
 			
 		case "GET-SEASON-SERIES-DATA":
 			

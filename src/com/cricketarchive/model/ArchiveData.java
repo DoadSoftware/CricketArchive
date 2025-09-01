@@ -10,17 +10,16 @@ public class ArchiveData{
   private long id;
   private String label;
   private String url;
-
-  public ArchiveData() {
-	super();
-  }
+  
 public ArchiveData(long id, String label, String url) {
 	super();
 	this.id = id;
 	this.label = label;
 	this.url = url;
 }
-  
+public ArchiveData() {
+	super();
+}
 public long getId() {
 	return id;
 }
@@ -43,5 +42,5 @@ public void setUrl(String url) {
 public String toString() {
 	return "ArchiveData [id=" + id + ", label=" + label + ", url=" + url + "]";
 }
-  
+
 }

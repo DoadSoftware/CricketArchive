@@ -114,182 +114,52 @@ public class Configuration {
 		this.broadcaster = broadcaster;
 	}
 
-	public Configuration(String filename, String broadcaster, String primaryIpAddress,
-			int primaryPortNumber, String primaryScene, String primaryLanguage, String preview) {
-		super();
-		this.filename = filename;
-		this.broadcaster = broadcaster;
-		this.primaryIpAddress = primaryIpAddress;
-		this.primaryPortNumber = primaryPortNumber;
-		this.primaryScene = primaryScene;
-		this.primaryLanguage = primaryLanguage;
-		this.preview = preview;
-	}
-
-	public Configuration(String filename, String broadcaster, String whichScene,
-			String primaryIpAddress, int primaryPortNumber, String primaryScene, String primaryLanguage,
-			String secondaryIpAddress, int secondaryPortNumber, String secondaryScene, String secondaryLanguage,
-			String tertiaryIpAddress, int tertiaryPortNumber, String tertiaryScene, String tertiaryLanguage) {
-		super();
-		this.filename = filename;
-		this.broadcaster = broadcaster;
-		this.whichScene = whichScene;
-		this.primaryIpAddress = primaryIpAddress;
-		this.primaryPortNumber = primaryPortNumber;
-		this.primaryScene = primaryScene;
-		this.primaryLanguage = primaryLanguage;
-		this.secondaryIpAddress = secondaryIpAddress;
-		this.secondaryPortNumber = secondaryPortNumber;
-		this.secondaryScene = secondaryScene;
-		this.secondaryLanguage = secondaryLanguage;
-		this.tertiaryIpAddress = tertiaryIpAddress;
-		this.tertiaryPortNumber = tertiaryPortNumber;
-		this.tertiaryScene = tertiaryScene;
-		this.tertiaryLanguage = tertiaryLanguage;
-	}
-
-	public Configuration(String filename, String broadcaster, String speedUnit,String qudich,String wagon,String audio, String primaryIpAddress, 
-			int primaryPortNumber, String primaryLanguage) {
-		super();
-		this.filename = filename;
-		this.broadcaster = broadcaster;
-		this.speedUnit = speedUnit;
-		this.audio = audio;
-		this.qudich = qudich;
-		this.wagon = wagon;
-		this.primaryIpAddress = primaryIpAddress;
-		this.primaryPortNumber = primaryPortNumber;
-		this.primaryLanguage = primaryLanguage;
-	}
-	
-	public Configuration(String filename, String broadcaster, String speedUnit,String qudich,String wagon,String audio, String primaryIpAddress, 
-			int primaryPortNumber, String primaryLanguage, String showSpeed, String showReview) {
-		super();
-		this.filename = filename;
-		this.broadcaster = broadcaster;
-		this.speedUnit = speedUnit;
-		this.audio = audio;
-		this.qudich = qudich;
-		this.wagon = wagon;
-		this.primaryIpAddress = primaryIpAddress;
-		this.primaryPortNumber = primaryPortNumber;
-		this.primaryLanguage = primaryLanguage;
-		this.showSpeed = showSpeed;
-		this.showReview = showReview;
-	}
-
-	public Configuration(String filename, String broadcaster,String secondaryBroadcaster,String qtIpAddress, 
-			int qtPortNumber,String qtScene, String qtLanguage, String primaryIpAddress, int primaryPortNumber,
-			String primaryScene, String primaryLanguage, String secondaryIpAddress, int secondaryPortNumber,
-			String secondaryScene, String secondaryLanguage, String tertiaryIpAddress, int tertiaryPortNumber,
-			String tertiaryScene, String tertiaryLanguage) {
-		super();
-		this.filename = filename;
-		this.broadcaster = broadcaster;
-		this.secondaryBroadcaster = secondaryBroadcaster;
-		this.qtIpAddress = qtIpAddress;
-		this.qtPortNumber = qtPortNumber;
-		this.qtScene = qtScene;
-		this.qtLanguage = qtLanguage;
-		this.primaryIpAddress = primaryIpAddress;
-		this.primaryPortNumber = primaryPortNumber;
-		this.primaryScene = primaryScene;
-		this.primaryLanguage = primaryLanguage;
-		this.secondaryIpAddress = secondaryIpAddress;
-		this.secondaryPortNumber = secondaryPortNumber;
-		this.secondaryScene = secondaryScene;
-		this.secondaryLanguage = secondaryLanguage;
-		this.tertiaryIpAddress = tertiaryIpAddress;
-		this.tertiaryPortNumber = tertiaryPortNumber;
-		this.tertiaryScene = tertiaryScene;
-		this.tertiaryLanguage = tertiaryLanguage;
-	}
-
-	
-	public Configuration(String filename, String broadcaster, String secondaryBroadcaster, 
-			String primaryIpAddress, int primaryPortNumber, String primaryLanguage,
-			String qtIpAddress,int qtPortNumber, String primaryVariousOptions, String secondaryIpAddress, 
-			int secondaryPortNumber,String secondaryLanguage, String preview,String whichInfobar) {
-		super();
-		this.filename = filename;
-		this.broadcaster = broadcaster;
-		this.secondaryBroadcaster = secondaryBroadcaster;
-		this.primaryIpAddress = primaryIpAddress;
-		this.primaryPortNumber = primaryPortNumber;
-		this.primaryLanguage = primaryLanguage;
-		this.qtIpAddress = qtIpAddress;
-		this.qtPortNumber = qtPortNumber;
-		this.primaryVariousOptions = primaryVariousOptions;
-		this.secondaryIpAddress = secondaryIpAddress;
-		this.secondaryPortNumber = secondaryPortNumber;
-		this.secondaryLanguage = secondaryLanguage;
-		this.preview = preview;
-		this.whichInfobar = whichInfobar;
-	}
-	public Configuration(String selectedMatch, String select_broadcaster, String select_second_broadcaster,
-			String primaryIpAddress, int primaryPortNumber, String primaryLanguage, String secondaryIpAddress,
-			int secondaryPortNumber, String secondaryLanguage) {
-			super();
-			this.filename = selectedMatch;
-			this.broadcaster = select_broadcaster;
-			this.secondaryBroadcaster = select_second_broadcaster;
-			this.primaryIpAddress = primaryIpAddress;
-			this.primaryPortNumber = primaryPortNumber;
-			this.primaryLanguage = primaryLanguage;
-			this.secondaryIpAddress = secondaryIpAddress;
-			this.secondaryPortNumber = secondaryPortNumber;
-	}
-	
-	public Configuration(String filename, String broadcaster, String secondaryBroadcaster, String whichScene,
-			String qtIpAddress, int qtPortNumber, String qtScene, String qtLanguage, String primaryIpAddress,
-			int primaryPortNumber, String primaryScene, String primaryLanguage, String secondaryIpAddress,
-			int secondaryPortNumber, String secondaryScene, String secondaryLanguage, String tertiaryIpAddress,
-			int tertiaryPortNumber, String tertiaryScene, String tertiaryLanguage) {
-		super();
-		this.filename = filename;
-		this.broadcaster = broadcaster;
-		this.secondaryBroadcaster = secondaryBroadcaster;
-		this.whichScene = whichScene;
-		this.qtIpAddress = qtIpAddress;
-		this.qtPortNumber = qtPortNumber;
-		this.qtScene = qtScene;
-		this.qtLanguage = qtLanguage;
-		this.primaryIpAddress = primaryIpAddress;
-		this.primaryPortNumber = primaryPortNumber;
-		this.primaryScene = primaryScene;
-		this.primaryLanguage = primaryLanguage;
-		this.secondaryIpAddress = secondaryIpAddress;
-		this.secondaryPortNumber = secondaryPortNumber;
-		this.secondaryScene = secondaryScene;
-		this.secondaryLanguage = secondaryLanguage;
-		this.tertiaryIpAddress = tertiaryIpAddress;
-		this.tertiaryPortNumber = tertiaryPortNumber;
-		this.tertiaryScene = tertiaryScene;
-		this.tertiaryLanguage = tertiaryLanguage;
-	}
-	
-	public String getWhichInfobar() {
-		return whichInfobar;
-	}
-
-	public void setWhichInfobar(String whichInfobar) {
-		this.whichInfobar = whichInfobar;
-	}
-
-	public String getPreview() {
-		return preview;
-	}
-
-	public void setPreview(String preview) {
-		this.preview = preview;
-	}
-
 	public String getPrimaryVariousOptions() {
 		return primaryVariousOptions;
 	}
 
 	public void setPrimaryVariousOptions(String primaryVariousOptions) {
 		this.primaryVariousOptions = primaryVariousOptions;
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+
+	public String getSecondaryFilename() {
+		return secondaryFilename;
+	}
+
+	public void setSecondaryFilename(String secondaryFilename) {
+		this.secondaryFilename = secondaryFilename;
+	}
+
+	public String getBroadcaster() {
+		return broadcaster;
+	}
+
+	public void setBroadcaster(String broadcaster) {
+		this.broadcaster = broadcaster;
+	}
+
+	public String getSecondaryBroadcaster() {
+		return secondaryBroadcaster;
+	}
+
+	public void setSecondaryBroadcaster(String secondaryBroadcaster) {
+		this.secondaryBroadcaster = secondaryBroadcaster;
+	}
+
+	public String getWhichScene() {
+		return whichScene;
+	}
+
+	public void setWhichScene(String whichScene) {
+		this.whichScene = whichScene;
 	}
 
 	public String getQtIpAddress() {
@@ -324,70 +194,6 @@ public class Configuration {
 		this.qtLanguage = qtLanguage;
 	}
 
-	public String getSecondaryBroadcaster() {
-		return secondaryBroadcaster;
-	}
-
-	public String getWhichScene() {
-		return whichScene;
-	}
-
-	public void setWhichScene(String whichScene) {
-		this.whichScene = whichScene;
-	}
-
-	public void setSecondaryBroadcaster(String secondaryBroadcaster) {
-		this.secondaryBroadcaster = secondaryBroadcaster;
-	}
-
-	public String getSecondaryFilename() {
-		return secondaryFilename;
-	}
-
-	public void setSecondaryFilename(String secondaryFilename) {
-		this.secondaryFilename = secondaryFilename;
-	}
-		
-	public String getPrimaryLanguage() {
-		return primaryLanguage;
-	}
-
-	public void setPrimaryLanguage(String primaryLanguage) {
-		this.primaryLanguage = primaryLanguage;
-	}
-
-	public String getSecondaryLanguage() {
-		return secondaryLanguage;
-	}
-
-	public void setSecondaryLanguage(String secondaryLanguage) {
-		this.secondaryLanguage = secondaryLanguage;
-	}
-
-	public String getTertiaryLanguage() {
-		return tertiaryLanguage;
-	}
-
-	public void setTertiaryLanguage(String tertiaryLanguage) {
-		this.tertiaryLanguage = tertiaryLanguage;
-	}
-
-	public String getFilename() {
-		return filename;
-	}
-
-	public void setFilename(String filename) {
-		this.filename = filename;
-	}
-
-	public String getBroadcaster() {
-		return broadcaster;
-	}
-
-	public void setBroadcaster(String broadcaster) {
-		this.broadcaster = broadcaster;
-	}
-
 	public String getPrimaryIpAddress() {
 		return primaryIpAddress;
 	}
@@ -410,6 +216,14 @@ public class Configuration {
 
 	public void setPrimaryScene(String primaryScene) {
 		this.primaryScene = primaryScene;
+	}
+
+	public String getPrimaryLanguage() {
+		return primaryLanguage;
+	}
+
+	public void setPrimaryLanguage(String primaryLanguage) {
+		this.primaryLanguage = primaryLanguage;
 	}
 
 	public String getSecondaryIpAddress() {
@@ -436,6 +250,14 @@ public class Configuration {
 		this.secondaryScene = secondaryScene;
 	}
 
+	public String getSecondaryLanguage() {
+		return secondaryLanguage;
+	}
+
+	public void setSecondaryLanguage(String secondaryLanguage) {
+		this.secondaryLanguage = secondaryLanguage;
+	}
+
 	public String getTertiaryIpAddress() {
 		return tertiaryIpAddress;
 	}
@@ -452,6 +274,14 @@ public class Configuration {
 		this.tertiaryPortNumber = tertiaryPortNumber;
 	}
 
+	public int getSelect_Client() {
+		return select_Client;
+	}
+
+	public void setSelect_Client(int select_Client) {
+		this.select_Client = select_Client;
+	}
+
 	public String getTertiaryScene() {
 		return tertiaryScene;
 	}
@@ -459,7 +289,15 @@ public class Configuration {
 	public void setTertiaryScene(String tertiaryScene) {
 		this.tertiaryScene = tertiaryScene;
 	}
-	
+
+	public String getTertiaryLanguage() {
+		return tertiaryLanguage;
+	}
+
+	public void setTertiaryLanguage(String tertiaryLanguage) {
+		this.tertiaryLanguage = tertiaryLanguage;
+	}
+
 	public String getSpeedUnit() {
 		return speedUnit;
 	}
@@ -484,14 +322,6 @@ public class Configuration {
 		this.qudich = qudich;
 	}
 
-	public String getWagon() {
-		return wagon;
-	}
-
-	public void setWagon(String wagon) {
-		this.wagon = wagon;
-	}
-
 	public String getCategory() {
 		return category;
 	}
@@ -500,12 +330,28 @@ public class Configuration {
 		this.category = category;
 	}
 
-	public int getSelect_Client() {
-		return select_Client;
+	public String getWagon() {
+		return wagon;
 	}
 
-	public void setSelect_Client(int select_Client) {
-		this.select_Client = select_Client;
+	public void setWagon(String wagon) {
+		this.wagon = wagon;
+	}
+
+	public String getPreview() {
+		return preview;
+	}
+
+	public void setPreview(String preview) {
+		this.preview = preview;
+	}
+
+	public String getWhichInfobar() {
+		return whichInfobar;
+	}
+
+	public void setWhichInfobar(String whichInfobar) {
+		this.whichInfobar = whichInfobar;
 	}
 
 	public String getShowSpeed() {

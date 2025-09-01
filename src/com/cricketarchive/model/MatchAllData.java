@@ -13,13 +13,6 @@ public class MatchAllData {
   private Match match;
   private Setup setup;
   private List<String> eventsDataList;
-  
-public List<String> getEventsDataList() {
-	return eventsDataList;
-}
-public void setEventsDataList(List<String> eventsDataList) {
-	this.eventsDataList = eventsDataList;
-}
 public String getTimeStats() {
 	return timeStats;
 }
@@ -38,9 +31,16 @@ public Setup getSetup() {
 public void setSetup(Setup setup) {
 	this.setup = setup;
 }
+public List<String> getEventsDataList() {
+	return eventsDataList;
+}
+public void setEventsDataList(List<String> eventsDataList) {
+	this.eventsDataList = eventsDataList;
+}
 @Override
 public String toString() {
-	return "MatchAllData [timeStats=" + timeStats + ", match=" + match + ", setup=" + setup + "]";
+	return "MatchAllData [timeStats=" + timeStats + ", match=" + match + ", setup=" + setup + ", eventsDataList="
+			+ eventsDataList + "]";
 }
-
+  
 }
